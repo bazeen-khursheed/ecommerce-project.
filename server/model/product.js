@@ -2,7 +2,7 @@ import mongoose from "mongoose"
 
 // 1st : Schema
 const productSchema = mongoose.Schema({
-    productname : String,
+    productName : String,
     description : String,
     price : Number,
     image : String
