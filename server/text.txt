@@ -1,0 +1,44 @@
+
+const express = require('express');
+const connectDB = require('./config/database');
+const todoModel = require('./models/todoModel');
+const axios = require('axios');
+const Navigate = require('react-router-dom');
+const app = express();
+const port = 5000;
+
+app.use(express.json());
+connectDB();
+
+
+
+
+app.post('/create', async (req, res) => {
+    console.log(req.body); 
+    const data = await todoModel.create(req.body);
+    res.json(data);
+});
+
+app.get('/', (req, res , next) => {
+    res.send('Hello World!');
+});
+
+
+app.put('/update/:id', async (req, res) => {
+    const data = await todoModel.findByIdAndUpdate({ _id: req.params.id }, {
+      productName : req.body.productName,
+       description : req.body.description,
+         price : req.body.price,
+            image : req.body.image
+    
+    })
+    res.json(data);
+});
+app.delete('/delete/:id', async (req, res) => {
+  const data=  await todoModel.deleteOne({ _id: req.params.id })
+    res.json(data);
+});
+
+app.listen(port, () => {
+  console.log(`Server is running `);
+});
