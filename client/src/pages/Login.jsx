@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import "./Register.css"
-import { Link, Navigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from "axios"
 import toast from "react-hot-toast"
 
@@ -8,7 +8,7 @@ import toast from "react-hot-toast"
 const Login = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
-
+  const navigate = useNavigate()
   async function submit(e) {
     e.preventDefault()
     try {
@@ -16,11 +16,12 @@ const Login = () => {
         email,
         password
       })
-      toast.success('Successfully logged in!')
-      Navigate("/Products")
+      alert("Login Successfully!")
+      navigate("/dashboard");
+
       console.log(data)
     } catch (error) {
-      toast.error('try again later')
+      alert("Please try again later!")
     }
   }
 
@@ -28,7 +29,7 @@ const Login = () => {
   return (
     <div className="container">
       <div className="tabs">
-        <Link to={"/login"}><button className="tab active">Login</button></Link>
+        <Link to={"/login"}><button className="tab-active">Login</button></Link>
         <Link to={"/"}><button className="tab">Sign Up</button></Link>
       </div>
 
@@ -56,7 +57,7 @@ const Login = () => {
       </div>
 
       <p className="signup-text">
-        Don’t have an account yet? <a href="./index.html">Sign up</a>
+        Don’t have an account yet? <Link to={"/"}>Sign up</Link>
       </p>
     </div>
   )

@@ -1,22 +1,24 @@
-import './App.css'
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Register from './pages/Register'
-import Login from './pages/Login'
-import Product from './pages/Product'
-import { Toaster } from "react-hot-toast"
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
+import CreateProduct from "./pages/CreateProduct";
+import ProductList from "./pages/ProductList";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Register />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/product' element={<Product />} />
+        <Route path="/" element={<Register />}></Route>
+        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        
+        <Route path="/create-product" element={<CreateProduct />} />
+        <Route path="/product-list" element={<ProductList />} />
       </Routes>
-      <Toaster />
+     
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,0 +1,61 @@
+.product-list-page {
+  display: flex;
+  min-height: 100vh;
+}
+
+.product-list-main {
+  flex: 1;
+  padding: 40px;
+}
+
+.table-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+}
+
+.table-card h2 {
+  margin-bottom: 20px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+th {
+  color: #777;
+  font-size: 14px;
+}
+
+td img {
+  width: 45px;
+  border-radius: 8px;
+}
+
+/* Buttons */
+.action-btn {
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.edit {
+  background: #ece8ff;
+  color: #6a4df4;
+  margin-right: 8px;
+}
+
+.delete {
+  background: #ffe4e4;
+  color: #ff4d4d;
+}

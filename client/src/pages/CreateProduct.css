@@ -1,0 +1,41 @@
+.product-page {
+  display: flex;
+  min-height: 100vh;
+}
+
+.product-main {
+  flex: 1;
+  padding: 40px;
+}
+
+.form-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 600px;
+}
+
+.form-card h2 {
+  margin-bottom: 20px;
+}
+
+.form-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.form-card button {
+  background: #6a4df4;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.form-card button:hover {
+  background: #5838e0;
+}

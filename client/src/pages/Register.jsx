@@ -20,10 +20,10 @@ const Register = () => {
                 password,
                 phone
             })
-            toast.success('Successfully regisered!')
+            alert("Register Successfully!")
             navigate("/login")
         } catch (error) {
-            toast.error("please try again later!")
+           alert("Please try again later!")
         }
     }
 
@@ -31,8 +31,8 @@ const Register = () => {
     return (
         <div className="container">
             <div className="tabs">
-                <Link to={"/login"}><button className="tab ">Login</button></Link>
-                <Link to={"/"}><button className="tab active">Sign Up</button></Link>
+                <Link to={"/login"}><button className="tabActive">Login</button></Link>
+                <Link to={"/"}><button className="tab-activee">Sign Up</button></Link>
             </div>
 
             <form onSubmit={(e) => submit(e)} id="loginForm">

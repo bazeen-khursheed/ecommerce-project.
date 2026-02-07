@@ -5,18 +5,20 @@
 }
 
 body {
-  background: #f4f4f4;
+  
+  background-color: #7E9E8D;
   display: flex;
+  height: 90vh;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  margin-top: 30px;
 }
 
 .container {
-  width: 380px;
+  width: 400px;
   background: #fff;
   padding: 25px;
-  border-radius: 12px;
+  border-radius: 8px;
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
@@ -35,14 +37,28 @@ body {
   cursor: pointer;
 }
 
-.tab.active {
+.tabActive {
+  width: 80px;
+   border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  padding: 8.5px 13px;
+}
+.tab-activee {
   background: #f0f0f0;
   font-weight: bold;
+  width: 80px;
+   border: 1px solid #ddd;
+  border-radius: 6px;
+  
+  cursor: pointer;
+  padding: 8px 12px;
 }
-
 label {
-  font-size: 14px;
+  font-size: 15px;
   margin-bottom: 5px;
+  font-weight: 600;
   display: block;
 }
 
@@ -52,6 +68,7 @@ input {
   border-radius: 6px;
   border: 1px solid #ccc;
   margin-bottom: 15px;
+  border: 1px solid #7E9E8D;
 }
 
 .password-header {
@@ -79,8 +96,9 @@ input {
 
 .login-btn {
   width: 100%;
-  padding: 12px;
-  background: linear-gradient(90deg, #222, #444);
+  padding: 10px;
+ 
+  background-color: #7E9E8D;
   color: white;
   border: none;
   border-radius: 8px;
@@ -112,6 +130,7 @@ input {
   text-align: center;
   margin-top: 20px;
   font-size: 14px;
+  
 }
 
 .signup-text a {
@@ -138,15 +157,29 @@ input {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
+.tab-active{
+  width: 80px;
+   border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+.tab-active {
+  background: #f0f0f0;
+  font-weight: bold;
+}
 
 .tab-buttons {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  ;
 }
 
 .tab-btn {
-  width: 48%;
+  width: 50px;
   padding: 10px 0;
   border-radius: 10px;
   border: 1px solid #ddd;
@@ -158,6 +191,7 @@ input {
 .tab-btn.active {
   background: #f1f1f1;
   font-weight: bold;
+  
 }
 
 

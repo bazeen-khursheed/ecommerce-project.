@@ -85,19 +85,23 @@ app.get("/getAllUsers", async (req, res) => {
 
 
 
-// Product API's//
-
-
-
-
-app.post('/create', async (req, res) => {
-    console.log(req.body);
-    const data = await productModel.create(req.body);
-    res.json(data);
+app.post('/product', async (req, res) => {
+  const product = new productModel(req.body);
+  const saved = await product.save();
+  res.json(saved); 
 });
 
-app.get('/', (req, res, next) => {
-    res.send('Hello World!');
+// app.get('/product', (req, res, next) => {
+//     res.send('Hello World!');
+// });
+
+app.get('/product', async (req, res) => {
+  try {
+    const products = await productModel.find(); // MongoDB se data
+    res.json(products); // Hello World ki jaga data
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 });
 
 
@@ -106,7 +110,9 @@ app.put('/update/:id', async (req, res) => {
         productName: req.body.productName,
         description: req.body.description,
         price: req.body.price,
-        image: req.body.image
+        image: req.body.image,
+        category: req.body.category,
+        stock: req.body.stock
 
     })
     res.json(data);

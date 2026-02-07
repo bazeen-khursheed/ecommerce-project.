@@ -1,0 +1,75 @@
+.dashboard {
+ 
+ 
+  
+  gap: 30px;
+  
+  
+}
+
+
+.sidebar {
+  width: 270px;
+
+  background: #ffffff;
+  border-right: 1px solid #eee;
+  position: absolute;
+  left: -400px;
+
+}
+
+.sidebar h2 {
+  color: #6a4df4;
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #555;
+  font-weight: 500;
+  width: 240px;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.active {
+  background: #f1edff;
+  color: #6a4df4;
+}
+
+
+.dashboard-main {
+ 
+  display: flex;
+  flex-direction: column;
+  
+  gap: 30px;
+}
+
+
+
+.dashboard-cards {
+ 
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 14px;
+  width: 220px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  cursor: pointer;
+}
+
+
+
+.card p {
+  color: #777;
+}
